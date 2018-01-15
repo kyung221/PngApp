@@ -15,7 +15,7 @@ Number of channels \
 ```java
 int channels = pngr.imgInfo.channels;
 ```
-
+***********************
 ### Width & Height
 
 Image widrh & height in pixel
