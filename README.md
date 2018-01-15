@@ -4,7 +4,7 @@ example usages of [pngj library](https://github.com/leonbloy/pngj) in android st
 ### Load PNG image
 * AssetManager
 
-* Png Reader
+* Png Reader\
 read a PNG image from file or stream\
 Each row is read as an ImageLineByte object (one byte per sample),
 uses byte to store the samples.
