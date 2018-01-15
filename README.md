@@ -37,4 +37,6 @@ byte line1 = line.getScanLineByte(); //return scanline, one byte for sample
 >The 'scanline' is an array of integers, corresponds to an image line (row).
 Each int is a "sample" (one for channel), (0-255 or 0-65535) in the corresponding PNG sequence
 
+![cat](https://github.com/kyung221/PngApp/blob/master/cat.png?raw=true)
+
 
