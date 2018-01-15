@@ -8,7 +8,7 @@ uses byte to store the samples.
 ```java
 PngReaderByte pngr
 ```
-
+*************8
 ### Channels
 Number of channels \
 1 for grayscale or indexed, 2 for GA(gray with alpha, 3 for RGB, 4 for RGBA   
