@@ -1,5 +1,5 @@
 # PngApp
-exampele usages of pngj library in android studio
+example usages of pngj library in android studio
 ## ImageData
 ### PNG reader
 read a PNG image from file or stream\
@@ -39,5 +39,19 @@ byte line1 = line.getScanLineByte(); //return scanline, one byte for sample
 Each int is a "sample" (one for channel), (0-255 or 0-65535) in the corresponding PNG sequence
 
 ![cat](https://github.com/kyung221/PngApp/blob/master/cat.png?raw=true)
+
+### Mirror image
+Mirror rows 
+```java
+           ImageLineByte l1 = pgrdr.readRowByte();
+            byte[] line = l1.getScanlineByte();
+            for (int c1 = 0, c2 = pgrdr.imgInfo.cols - 1; c1 < c2; c1++, c2--) {
+                for (int i = 0; i < channels; i++) {
+                    aux = line[c1 * channels + i];
+                    line[c1 * channels + i] = line[c2 * channels + i];
+                    line[c2 * channels + i] = aux;
+                }
+```
+
 
 
