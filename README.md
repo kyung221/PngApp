@@ -1,4 +1,5 @@
 # PngApp
+exampele usages of pngj library in android studio
 ## ImageData
 ### PNG reader
 read a PNG image from file or stream\
