@@ -1,6 +1,12 @@
 package com.example.dummy;
 
 
+import android.content.Context;
+import android.media.Image;
+
+
+import com.example.iload.*;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +32,8 @@ public class DummyContent {
 
     private static final int COUNT = 25;
 
+
+
     static {
         // Add some sample items.
         for (int i = 1; i <= COUNT; i++) {
@@ -37,7 +45,25 @@ public class DummyContent {
         ITEMS.add(item);
         ITEM_MAP.put(item.id, item);
     }
-
+//    private static DummyItem createDummyItem(int position)
+//    {
+//        return new DummyItem(String.valueOf(position),makeImage("cake.png"));
+//
+//    }
+//    private static ImageData makeImage(String name){
+//        Context context = null;
+//        imageLoader myloader = new imageLoader();
+//       // ImageData myimg = new png();
+//        try {
+//           myimg = myloader.load(context,name);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return myimg;
+//
+//    }
     private static DummyItem createDummyItem(int position) {
         return new DummyItem(String.valueOf(position), "Item " + position, makeDetails(position));
     }
@@ -50,6 +76,7 @@ public class DummyContent {
         }
         return builder.toString();
     }
+
 
     /**
      * A dummy item representing a piece of content.
@@ -69,5 +96,26 @@ public class DummyContent {
         public String toString() {
             return content;
         }
+
+
     }
+//
+//    public static class DummyItem {
+//        public final String id;
+//        public final ImageData image;
+//        //public char[] content;
+//
+//        public final String content;
+//        public final String details;
+//
+//        public DummyItem(String id, ImageData image)
+//        {
+//            this.id = id;
+//            this.image = image;
+//            this.content = image.toString();
+//            this.details = image.toString();
+//
+//        }
+//
+//    }
 }
