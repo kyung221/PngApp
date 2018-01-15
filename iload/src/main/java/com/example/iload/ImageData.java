@@ -1,12 +1,9 @@
 package com.example.iload;
 
 import android.graphics.ImageFormat;
-import android.media.Image;
 
 import java.io.InputStream;
 
-import ar.com.hjg.pngj.ImageLineByte;
-import ar.com.hjg.pngj.PngReaderByte;
 
 public interface ImageData {
     ImageFormat getFormat();

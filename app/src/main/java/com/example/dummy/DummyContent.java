@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
@@ -74,6 +76,13 @@ public class DummyContent {
         for (int i = 0; i < position; i++) {
             builder.append("\nMore details information here.");
         }
+        ILoader myloader = new PNGLoader();
+        ImageData img = null;
+       // img = myloader.load(this.getContext(),"cake.png");
+        int height=img.getHeight();
+
+
+        builder.append(height);
         return builder.toString();
     }
 

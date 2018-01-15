@@ -1,10 +1,7 @@
 package com.example.iload;
 
-import android.content.Context;
-import android.content.res.AssetManager;
 import android.graphics.ImageFormat;
 
-import java.io.IOException;
 import java.io.InputStream;
 
 import ar.com.hjg.pngj.ImageLineByte;

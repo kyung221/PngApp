@@ -1,5 +1,6 @@
 package com.example;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -13,6 +14,8 @@ import android.view.MenuItem;
 
 import com.example.iload.ILoader;
 import com.example.iload.ImageData;
+import com.example.iload.PNGLoader;
+
 
 /**
  * An activity representing a single Item detail screen. This
@@ -21,6 +24,7 @@ import com.example.iload.ImageData;
  * in a {@link ItemListActivity}.
  */
 public class ItemDetailActivity extends AppCompatActivity {
+    ILoader loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,13 @@ public class ItemDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
         setSupportActionBar(toolbar);
+
+        loader = new PNGLoader();
+        try {
+            ImageData cake = loader.load(this.getApplicationContext(),"cake.png");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +76,7 @@ public class ItemDetailActivity extends AppCompatActivity {
                     .add(R.id.item_detail_container, fragment)
                     .commit();
         }
+
     }
 
     @Override
@@ -82,4 +94,5 @@ public class ItemDetailActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -3,19 +3,11 @@ package com.example.iload;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-import java.io.InputStream;
 
-import ar.com.hjg.pngj.PngReaderByte;
-
-public class imageLoader implements ILoader{
+public class PNGLoader implements ILoader{
     AssetManager am;
 
-
-    public imageLoader(Context context){
-
-    }
-
-    public imageLoader() {
+    public PNGLoader() {
 
     }
 
