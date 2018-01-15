@@ -12,12 +12,18 @@ import ar.com.hjg.pngj.PngReaderByte;
 
 public class png implements ImageData {
 
+    PngReaderByte pngr;
+
     int width;
     int height;
     int channels;
     byte[] data;
 
-    PngReaderByte pngr;
+
+    @Override
+    public void load(InputStream open) {
+        pngr = new PngReaderByte(open);
+    }
 
     @Override
     public ImageFormat getFormat() {
@@ -47,7 +53,7 @@ public class png implements ImageData {
 
     @Override
     public byte[] getData() {
-        data = new byte[width*height*channels];
+        data = new byte[pngr.imgInfo.cols*pngr.imgInfo.rows*pngr.imgInfo.channels];
         int count = 0;
         while(pngr.hasMoreRows()) {
             ImageLineByte line = pngr.readRowByte();
@@ -57,4 +63,5 @@ public class png implements ImageData {
         }
         return data;
     }
+
 }

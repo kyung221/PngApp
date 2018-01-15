@@ -14,6 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.Arrays;
 
 import static android.support.test.InstrumentationRegistry.getContext;
 
@@ -27,9 +28,11 @@ public class image extends ExampleInstrumentedTest {
         ILoader myloader = new imageLoader();
 
         ImageData img = myloader.load(context,"cake.png");
-        Assert.assertNotNull(img);
 
-        Assert.assertEquals(10,img.getHeight());
+        Assert.assertNotNull(img);
+       // Assert.assertEquals(4,img.getFormat());
+        //Assert.assertEquals(10,img.getChannel());
+        Assert.assertEquals(10, img.getData().length);
 
     }
 

@@ -28,10 +28,11 @@ public class imageLoader implements ILoader{
     public ImageData load(Context context, String assetPath) throws Exception {
 
         am = context.getAssets();
-        PngReaderByte pngr = new PngReaderByte(am.open(assetPath));
-
         ImageData png = new png();
+        png.load(am.open(assetPath));
 
         return png;
     }
+
+
 }
